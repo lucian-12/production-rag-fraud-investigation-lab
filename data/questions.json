@@ -1,0 +1,22 @@
+[
+  {
+    "id": "risk-signals",
+    "label": "Triggered signals",
+    "question": "Which signals increase or reduce the risk?"
+  },
+  {
+    "id": "current-policy",
+    "label": "Current policy",
+    "question": "What does the current fraud policy require?"
+  },
+  {
+    "id": "device-history",
+    "label": "Device history",
+    "question": "Has this customer used the device or network before?"
+  },
+  {
+    "id": "similar-cases",
+    "label": "Similar cases",
+    "question": "What happened in similar investigations?"
+  }
+]

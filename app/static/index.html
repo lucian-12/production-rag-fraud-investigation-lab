@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Compare naive vector retrieval with a production-style evidence pipeline."
+    />
+    <title>Production RAG Fraud Investigation Lab</title>
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/">CODE.WITH LUCIAN <span>/ LAB</span></a>
+      <a class="text-link" href="/docs">API docs →</a>
+    </header>
+
+    <main>
+      <section class="project-intro">
+        <p class="eyebrow">Runnable starter project</p>
+        <h1>Production RAG Fraud Investigation Lab</h1>
+        <p class="project-summary">
+          Compare similarity-only retrieval with a RAG pipeline that validates document versions,
+          tenant boundaries and permissions before building a cited evidence brief.
+        </p>
+        <div class="meta-row">
+          <span>No API key</span><span>PostgreSQL + pgvector</span><span>Synthetic data</span>
+        </div>
+      </section>
+
+      <div class="flow-connector" aria-hidden="true"><span>↓</span></div>
+
+      <section class="case-card" aria-labelledby="case-title">
+        <span class="input-tag">Input</span>
+        <div class="case-copy">
+          <p class="case-reference">Case <span id="case-id">—</span></p>
+          <h2 id="case-title">A legitimate purchase—or an account takeover?</h2>
+        </div>
+        <div class="case-facts" id="case-facts"></div>
+      </section>
+
+      <div class="flow-connector" aria-hidden="true"><span>↓</span></div>
+
+      <section class="workspace">
+        <aside class="controls">
+          <div>
+            <p class="control-label">1. Choose the pipeline</p>
+            <div class="segmented" id="mode-controls"></div>
+          </div>
+          <div>
+            <p class="control-label">2. Ask the evidence</p>
+            <div class="question-list" id="question-controls"></div>
+          </div>
+          <button class="run-button" id="run-button">Run investigation <span>→</span></button>
+          <p class="helper" id="mode-description"></p>
+        </aside>
+
+        <div class="results" aria-live="polite">
+          <div class="result-header">
+            <div>
+              <p class="eyebrow" id="result-mode">Production RAG</p>
+              <h2 id="result-question">Inspecting the evidence…</h2>
+            </div>
+            <span class="status-badge" id="result-status">Ready</span>
+          </div>
+
+          <div class="pipeline" id="pipeline"></div>
+
+          <section class="schema-section primary-output" aria-labelledby="brief-label">
+            <p class="schema-label" id="brief-label">04 · Evidence brief</p>
+            <div class="panel" id="brief-panel"></div>
+          </section>
+
+          <div class="evidence-grid">
+            <section class="schema-section" aria-labelledby="sources-label">
+              <p class="schema-label" id="sources-label">Included evidence</p>
+              <div class="panel" id="sources-panel"></div>
+            </section>
+            <section class="schema-section rejected-output" aria-labelledby="discarded-label">
+              <p class="schema-label" id="discarded-label">Rejected evidence</p>
+              <div class="panel" id="discarded-panel"></div>
+            </section>
+          </div>
+
+          <div id="practice-panel"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>Educational demo with synthetic data. AI recommends; a person decides.</footer>
+    <script src="/assets/app.js" defer></script>
+  </body>
+</html>

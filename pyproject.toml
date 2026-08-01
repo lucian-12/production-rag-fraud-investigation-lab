@@ -1,0 +1,13 @@
+[project]
+name = "production-rag-fraud-investigation-lab"
+version = "0.1.0"
+description = "A keyless Production RAG demo that compares naive retrieval with evidence-aware retrieval."
+requires-python = ">=3.9"
+dependencies = [
+  "fastapi==0.115.0",
+  "uvicorn[standard]==0.30.6",
+  "psycopg[binary]==3.2.1",
+]
+
+[tool.ruff]
+line-length = 100

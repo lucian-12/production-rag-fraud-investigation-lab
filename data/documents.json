@@ -1,0 +1,110 @@
+[
+  {
+    "id": "policy-v4.8-auto-block",
+    "title": "Fraud Policy v4.8 — Automatic Block Rules",
+    "document_type": "policy",
+    "version": "4.8",
+    "active": false,
+    "tenant_id": "global",
+    "access_roles": ["fraud-analyst", "fraud-manager"],
+    "published_at": "2024-02-10",
+    "content": "Automatically block card-not-present purchases above $4,000 when a new device and a foreign hosting IP are present. This policy was superseded by v6.2.",
+    "embedding": [0.88, 0.99, 0.2, 0.1, 0.1, 0.1]
+  },
+  {
+    "id": "policy-v6.2-step-up",
+    "title": "Fraud Policy v6.2 — High-Value Verification",
+    "document_type": "policy",
+    "version": "6.2",
+    "active": true,
+    "tenant_id": "global",
+    "access_roles": ["fraud-analyst", "fraud-manager"],
+    "published_at": "2026-04-18",
+    "content": "For a high-value card-not-present purchase on a new device, require step-up authentication. Route the case to manual review when the network is foreign or hosted. Do not automatically block without additional evidence.",
+    "embedding": [0.75, 1.0, 0.3, 0.2, 0.1, 0.2]
+  },
+  {
+    "id": "restricted-watch-note",
+    "title": "Executive Merchant Watch Note — Northlight Cameras",
+    "document_type": "restricted-note",
+    "version": "1.0",
+    "active": true,
+    "tenant_id": "northstar-bank",
+    "access_roles": ["fraud-manager"],
+    "published_at": "2026-07-10",
+    "content": "Northlight Cameras is under confidential executive review after an unverified chargeback spike. This document is restricted and must not be exposed to fraud analysts.",
+    "embedding": [0.96, 0.2, 0.2, 0.1, 0.95, 0.1]
+  },
+  {
+    "id": "device-fr2048",
+    "title": "Device & Network Intelligence — FR-2048",
+    "document_type": "device-intelligence",
+    "version": "2026-07-31",
+    "active": true,
+    "tenant_id": "northstar-bank",
+    "access_roles": ["fraud-analyst", "fraud-manager"],
+    "published_at": "2026-07-31",
+    "content": "Device fingerprint 9F:22 has never appeared on Elena M.'s account. The request originated from a Singapore hosting ASN. No previous trusted-session cookie was presented.",
+    "embedding": [0.94, 0.2, 1.0, 0.2, 0.1, 0.2]
+  },
+  {
+    "id": "customer-profile-elena",
+    "title": "Customer Profile — Elena M.",
+    "document_type": "customer-profile",
+    "version": "2026-07-31",
+    "active": true,
+    "tenant_id": "northstar-bank",
+    "access_roles": ["fraud-analyst", "fraud-manager"],
+    "published_at": "2026-07-31",
+    "content": "Elena's account is four years old. Typical purchases range from $50 to $300. The Berlin delivery address was used for 17 successful purchases and has no disputes.",
+    "embedding": [0.85, 0.2, 0.4, 0.2, 0.1, 1.0]
+  },
+  {
+    "id": "merchant-northlight",
+    "title": "Merchant Registry — Northlight Cameras",
+    "document_type": "merchant-registry",
+    "version": "2026-07",
+    "active": true,
+    "tenant_id": "global",
+    "access_roles": ["fraud-analyst", "fraud-manager"],
+    "published_at": "2026-07-01",
+    "content": "Northlight Cameras is a verified electronics merchant operating for nine years. Its public chargeback rate remains within the approved category threshold.",
+    "embedding": [0.76, 0.2, 0.1, 0.2, 1.0, 0.1]
+  },
+  {
+    "id": "case-ato-118",
+    "title": "Historical Case ATO-118 — Confirmed Account Takeover",
+    "document_type": "historical-case",
+    "version": "1.0",
+    "active": true,
+    "tenant_id": "northstar-bank",
+    "access_roles": ["fraud-analyst", "fraud-manager"],
+    "published_at": "2026-01-12",
+    "content": "A four-year customer account placed a $5,200 camera order from a new device and Singapore hosting IP. Step-up authentication failed and the customer denied the purchase. Final verdict: account takeover.",
+    "embedding": [0.92, 0.2, 0.4, 1.0, 0.1, 0.2]
+  },
+  {
+    "id": "case-legit-travel-041",
+    "title": "Historical Case TRAVEL-041 — Legitimate Purchase",
+    "document_type": "historical-case",
+    "version": "1.0",
+    "active": true,
+    "tenant_id": "northstar-bank",
+    "access_roles": ["fraud-analyst", "fraud-manager"],
+    "published_at": "2025-11-03",
+    "content": "A long-standing customer purchased $4,600 in photography equipment while travelling in Asia. The device was new, but step-up authentication succeeded and delivery used a trusted home address. Final verdict: legitimate.",
+    "embedding": [0.7, 0.1, 0.3, 0.96, 0.1, 0.4]
+  },
+  {
+    "id": "other-tenant-case",
+    "title": "Historical Case ATO-552 — Other Bank Tenant",
+    "document_type": "historical-case",
+    "version": "1.0",
+    "active": true,
+    "tenant_id": "harbor-bank",
+    "access_roles": ["fraud-analyst", "fraud-manager"],
+    "published_at": "2026-06-09",
+    "content": "A highly similar camera transaction was confirmed as account takeover. This case belongs to another bank tenant and cannot be used by Northstar analysts.",
+    "embedding": [0.91, 0.15, 0.35, 0.98, 0.1, 0.2]
+  }
+]
