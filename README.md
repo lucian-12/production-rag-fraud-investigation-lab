@@ -158,6 +158,13 @@ and safe implementation order are documented in [docs/live-mode.md](docs/live-mo
 A subscriber can add an external AI provider or a local model later. The demo itself remains fast,
 free and reproducible.
 
+## Continue with RAG interview practice
+
+Can you explain these RAG trade-offs under interview pressure?
+
+Explore [33 focused interview questions on embeddings, vector search and production
+RAG](https://codewithlucian.com/coding/embeddings_vector_search_rag?utm_source=rag_fraud_lab&utm_medium=project&utm_campaign=rag_at_10_million&utm_content=ai_questions_cta).
+
 ## Limitations
 
 - The data and fraud scenario are fictional.
